@@ -22,6 +22,10 @@
         {
             "match":"\\b(?i)(end|return)(?-i)\\b",
             "name": "keyword.control.arm.pokescript"
+        },
+        {
+            "match":"\\.(?i)(thumb|autostring)\\b",
+            "name": "keyword.control.directive.arm"
         }
     ]
 }
