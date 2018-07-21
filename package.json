@@ -3,30 +3,26 @@
     "displayName": "PokéScript",
     "description": "PokéScript Language Support",
     "version": "0.0.1",
-    "publisher": "SBird1337",
+    "publisher": "karathan",
     "engines": {
         "vscode": "^1.25.0"
     },
     "categories": [
         "Other"
     ],
+    "extensionDependencies": [
+        "dan-c-underwood.arm"
+    ],
     "activationEvents": [
         "onCommand:extension.sayHello"
     ],
     "main": "./out/extension",
     "contributes": {
-        "languages":[
-            {
-                "id": "pokescript",
-                "extensions": [".s", ".S", ".asm", ".rbc"],
-                "aliases": ["Pokéscript", "Pokescript", "pokescript"]
-            }
-        ],
         "grammars":[
             {
-                "language": "pokescript",
                 "scopeName": "source.arm.pokescript",
-                "path": "./syntaxes/pokescript.json"
+                "path": "./syntaxes/pokescript.json",
+                "injectTo": [ "source.arm" ]
             }
         ],
         "commands": [
