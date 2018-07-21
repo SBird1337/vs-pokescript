@@ -6,40 +6,40 @@
     "homepage": "https://gitlab.karathan.at/Karathan/vs-pokescript",
     "repository": {
         "type": "git",
-        "url": "https://gitlab.karathan.at/Karathan/vs-pokescript"
+        "url": "https://gitlab.karathan.at/Karathan/vs-pokescript.git"
     },
     "license": "MIT",
-	"galleryBanner": {
-		"color": "#0084A9",
-		"theme": "dark"
+    "galleryBanner": {
+        "color": "#0084A9",
+        "theme": "dark"
     },
     "icon": "images/icon.png",
     "publisher": "karathan",
     "engines": {
         "vscode": "^1.25.0"
     },
-    "categories": ["Programming Languages"],
-    "keywords": ["romhacking", "assembly", "pokescript"],
+    "categories": [
+        "Programming Languages"
+    ],
+    "keywords": [
+        "romhacking",
+        "assembly",
+        "pokescript"
+    ],
     "preview": true,
-
     "extensionDependencies": [
         "dan-c-underwood.arm"
     ],
     "contributes": {
-        "grammars":[
+        "grammars": [
             {
                 "scopeName": "source.arm.pokescript",
                 "path": "./syntaxes/pokescript.json",
-                "injectTo": [ "source.arm" ]
+                "injectTo": [
+                    "source.arm"
+                ]
             }
         ]
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
         "typescript": "^2.6.1",
