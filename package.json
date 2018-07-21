@@ -2,33 +2,35 @@
     "name": "pokescript",
     "displayName": "PokéScript",
     "description": "PokéScript Language Support",
-    "version": "0.0.1",
+    "version": "1.0.1",
+    "homepage": "https://gitlab.karathan.at/Karathan/vs-pokescript",
+    "repository": {
+        "type": "git",
+        "url": "https://gitlab.karathan.at/Karathan/vs-pokescript"
+    },
+    "license": "MIT",
+	"galleryBanner": {
+		"color": "#0084A9",
+		"theme": "dark"
+    },
+    "icon": "images/icon.png",
     "publisher": "karathan",
     "engines": {
         "vscode": "^1.25.0"
     },
-    "categories": [
-        "Other"
-    ],
+    "categories": ["Programming Languages"],
+    "keywords": ["romhacking", "assembly", "pokescript"],
+    "preview": true,
+
     "extensionDependencies": [
         "dan-c-underwood.arm"
     ],
-    "activationEvents": [
-        "onCommand:extension.sayHello"
-    ],
-    "main": "./out/extension",
     "contributes": {
         "grammars":[
             {
                 "scopeName": "source.arm.pokescript",
                 "path": "./syntaxes/pokescript.json",
                 "injectTo": [ "source.arm" ]
-            }
-        ],
-        "commands": [
-            {
-                "command": "extension.sayHello",
-                "title": "Hello World"
             }
         ]
     },
